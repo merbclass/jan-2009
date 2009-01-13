@@ -26,9 +26,10 @@ dependency "dm-aggregates", dm_gems_version
 dependency "dm-migrations", dm_gems_version   
 dependency "dm-serializer", dm_gems_version   
 dependency "dm-timestamps", dm_gems_version
-dependency "dm-types", dm_gems_version        
+dependency("dm-types", dm_gems_version) { require("stalkr" / "custom_dm_types") }
 dependency "dm-validations", dm_gems_version  
 dependency "dm-sweatshop", dm_gems_version
+dependency "rdiscount", ">= 1.2"
 
 dependency "merb_datamapper", merb_gems_version
 dependency "do_mysql", data_object_version, :require_as => nil
