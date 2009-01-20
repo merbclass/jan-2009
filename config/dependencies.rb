@@ -1,8 +1,12 @@
 # dependencies are generated using a strict version, don't forget to edit the dependency versions when upgrading.
 merb_gems_version = "1.0.8.1"
 dm_gems_version   = "0.9.9"
+data_object_version = "0.9.11"
 
 # For more information about each component, please read http://wiki.merbivore.com/faqs/merb_components
+dependency "do_sqlite3", data_object_version # If using another database, replace this
+dependency "data_objects", data_object_version
+
 dependency "merb-core", merb_gems_version
 dependency "merb-action-args", merb_gems_version
 dependency "merb-assets", merb_gems_version  
@@ -16,9 +20,6 @@ dependency "merb-auth-slice-password", merb_gems_version
 dependency "merb-param-protection", merb_gems_version
 dependency "merb-exceptions", merb_gems_version
  
-dependency "merb_datamapper", merb_gems_version
-dependency "do_sqlite3", "0.9.10.1" # If using another database, replace this
-
 dependency "dm-core", dm_gems_version         
 dependency "dm-aggregates", dm_gems_version   
 dependency "dm-migrations", dm_gems_version   
@@ -28,4 +29,3 @@ dependency "dm-validations", dm_gems_version
 dependency "dm-sweatshop", dm_gems_version
 
 dependency "merb_datamapper", merb_gems_version
-dependency "do_sqlite3" # If using another database, replace this

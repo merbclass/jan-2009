@@ -60,7 +60,7 @@ describe "resource(:articles)" do
     before(:each) do
       Article.all.destroy!
       @response = request(resource(:articles), :method => "POST", 
-        :params => { :article => { :id => nil }})
+        :params => { :article => { :title => "my title", :body => "my body" }})
     end
     
     it "redirects to resource(:articles)" do
